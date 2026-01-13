@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boulangerie du Sud — Marseille Prado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <strong>Boulangerie du Sud</strong>
+      <span>67 Avenue du Prado, 13006 Marseille</span>
+    </div>
+    <nav class="nav">
+      <a class="active" href="index.html">Accueil</a>
+      <a href="produits.html">Produits</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a class="primary" id="openOffersBtn" href="javascript:void(0)">Offres du moment</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="card">
+      <h1>Le goût juste, chaque jour.</h1>
+      <p>
+        Bienvenue chez Yon chez Yon Boulangerie artisanale à Marseille (Prado). Pains traditionnels, viennoiseries, pâtisseries,
+        snacking et boissons — avec une sélection simple, soignée, et régulière.
+      </p>
+      <hr>
+      <div class="list">
+        <div class="row">
+          <div class="left">
+            <div class="name">Horaires</div>
+            <div class="desc">Ouvert tous les jours</div>
+          </div>
+          <div class="price">7h00 — 19h00</div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <div class="name">Adresse</div>
+            <div class="desc">Accès métro/bus Prado (selon lignes)</div>
+          </div>
+          <div class="price">13006</div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <div class="name">Contact</div>
+            <div class="desc">04 91 55 12 34 • contact@boulangeriedusud.fr</div>
+          </div>
+          <div class="price">Appeler</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kv">
+      <div class="tag">Vitrine • Sérieux • Premium chaleureux</div>
+      <div class="meta">
+        Une présentation épurée, centrée sur l’essentiel : la qualité, la régularité, l’accueil.
+      </div>
+    </div>
+  </section>
+
+  <div class="section-title">
+    <h2>Offres & formules</h2>
+    <p>Exemples d’offres simples (modifiables à tout moment)</p>
+  </div>
+
+  <section class="grid">
+    <article class="item">
+      <h3>Formule Viennoiseries</h3>
+      <p>3 croissants + 3 chocolatines</p>
+      <span class="badge">Offre du matin</span>
+    </article>
+
+    <article class="item">
+      <h3>Chouquettes</h3>
+      <p>4 chouquettes offertes dès 10 achetées</p>
+      <span class="badge">Idéal à partager</span>
+    </article>
+
+    <article class="item">
+      <h3>Pause café</h3>
+      <p>Café + viennoiserie (selon disponibilité)</p>
+      <span class="badge">Rapide & efficace</span>
+    </article>
+  </section>
+
+  <div class="section-title">
+    <h2>Produits phares</h2>
+    <p>Une base stable, des variantes selon saison</p>
+  </div>
+
+  <section class="grid">
+    <article class="item">
+      <h3>Pain tradition</h3>
+      <p>Croûte fine, mie équilibrée — parfait au quotidien.</p>
+      <span class="badge">Classique</span>
+    </article>
+    <article class="item">
+      <h3>Viennoiseries</h3>
+      <p>Croissants, chocolatines, brioches — dorés, réguliers.</p>
+      <span class="badge">Matin</span>
+    </article>
+    <article class="item">
+      <h3>Snacking</h3>
+      <p>Sandwichs classiques, préparations simples et fraîches.</p>
+      <span class="badge">Midi</span>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <div>© Boulangerie du Sud — 67 Avenue du Prado, 13006 Marseille</div>
+    <div>7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</div>
+  </footer>
+</main>
+
+<!-- Modal Offres -->
+<div class="modal-backdrop" id="offersBackdrop" aria-hidden="true">
+  <div class="modal" id="offersModal" role="dialog" aria-modal="true" aria-label="Offres du moment">
+    <div class="modal-top">
+      <div>
+        <h3>Offres du moment</h3>
+        <p>Affichage simple (tu pourras modifier le contenu facilement).</p>
+      </div>
+      <button class="btn" id="closeOffersBtn" type="button">Fermer</button>
+    </div>
+
+    <ul>
+      <li><strong>3 croissants + 3 chocolatines</strong> — formule viennoiseries (matin)</li>
+      <li><strong>Chouquettes</strong> — 4 offertes dès 10 achetées</li>
+      <li><strong>Pause café</strong> — café + viennoiserie (selon dispo)</li>
+    </ul>
+
+    <div class="modal-actions">
+      <button class="btn primary" type="button" onclick="closeOffers()">OK</button>
+      <button class="btn" id="dontShowTodayBtn" type="button">Ne plus afficher aujourd’hui</button>
+    </div>
+
+    <div class="small" style="margin-top:10px;">
+      Astuce : tu peux aussi ouvrir ce pop-up via le bouton “Offres du moment” en haut.
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
