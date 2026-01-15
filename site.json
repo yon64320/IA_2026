@@ -1,0 +1,259 @@
+{
+  "site": {
+    "name": "Boulangerie du Sud",
+    "address": "67 Avenue du Prado, 13006 Marseille",
+    "phone": "04 91 55 12 34",
+    "email": "contact@boulangeriedusud.fr",
+    "hours": "7h00 — 19h00",
+    "copyright": "© Boulangerie du Sud"
+  },
+  "home": {
+    "pageTitle": "Boulangerie du Sud — Marseille Prado",
+    "hero": {
+      "title": "Le goût juste, chaque jour.",
+      "text": "Bienvenue chez Yon. Boulangerie artisanale à Marseille (Prado). Pains traditionnels, viennoiseries, pâtisseries, snacking et boissons — avec une sélection simple, soignée, et régulière."
+    },
+    "facts": [
+      {
+        "name": "Horaires",
+        "desc": "Ouvert tous les jours",
+        "value": "7h00 — 19h00"
+      },
+      {
+        "name": "Adresse",
+        "desc": "Accès métro/bus Prado (selon lignes)",
+        "value": "13006"
+      },
+      {
+        "name": "Contact",
+        "desc": "04 91 55 12 34 • contact@boulangeriedusud.fr",
+        "value": "Appeler"
+      }
+    ],
+    "kv": {
+      "tag": "Vitrine • Sérieux • Premium chaleureux",
+      "meta": "Une présentation épurée, centrée sur l’essentiel : la qualité, la régularité, l’accueil."
+    },
+    "offersSection": {
+      "title": "Offres & formules",
+      "subtitle": "Exemples d’offres simples (modifiables à tout moment)",
+      "cards": [
+        {
+          "title": "Formule Viennoiseries",
+          "text": "3 croissants + 3 chocolatines",
+          "badge": "Offre du matin"
+        },
+        {
+          "title": "Chouquettes",
+          "text": "4 chouquettes offertes dès 10 achetées",
+          "badge": "Idéal à partager"
+        },
+        {
+          "title": "Pause café",
+          "text": "Café + viennoiserie (selon disponibilité)",
+          "badge": "Rapide & efficace"
+        }
+      ]
+    },
+    "featuredSection": {
+      "title": "Produits phares",
+      "subtitle": "Une base stable, des variantes selon saison",
+      "cards": [
+        {
+          "title": "Pain tradition",
+          "text": "Croûte fine, mie équilibrée — parfait au quotidien.",
+          "badge": "Classique"
+        },
+        {
+          "title": "Viennoiseries",
+          "text": "Croissants, chocolatines, brioches — dorés, réguliers.",
+          "badge": "Matin"
+        },
+        {
+          "title": "Snacking",
+          "text": "Sandwichs classiques, préparations simples et fraîches.",
+          "badge": "Midi"
+        }
+      ]
+    },
+    "offersModal": {
+      "title": "Offres du moment",
+      "subtitle": "Affichage simple (tu pourras modifier le contenu facilement).",
+      "items": [
+        {
+          "strong": "3 croissants + 3 chocolatines",
+          "text": "formule viennoiseries (matin)"
+        },
+        {
+          "strong": "Chouquettes",
+          "text": "4 offertes dès 10 achetées"
+        },
+        {
+          "strong": "Pause café",
+          "text": "café + viennoiserie (selon dispo)"
+        }
+      ],
+      "hint": "Astuce : tu peux aussi ouvrir ce pop-up via le bouton “Offres du moment” en haut."
+    }
+  },
+  "products": {
+    "pageTitle": "Produits — Boulangerie du Sud",
+    "intro": "Sélection indicative. Certaines références varient selon la saison et les disponibilités.",
+    "categories": [
+      {
+        "id": "pains",
+        "title": "Pains",
+        "subtitle": "Classiques & traditionnels",
+        "items": [
+          {
+            "name": "Tradition",
+            "desc": "Format classique",
+            "price": "—"
+          },
+          {
+            "name": "Baguette",
+            "desc": "Croustillante, régulière",
+            "price": "—"
+          },
+          {
+            "name": "Pain de campagne",
+            "desc": "Mie plus dense",
+            "price": "—"
+          }
+        ]
+      },
+      {
+        "id": "viennoiseries",
+        "title": "Viennoiseries",
+        "subtitle": "Le matin (et parfois toute la journée)",
+        "items": [
+          {
+            "name": "Croissant",
+            "desc": "Beurré, doré",
+            "price": "—"
+          },
+          {
+            "name": "Chocolatine",
+            "desc": "Classique",
+            "price": "—"
+          },
+          {
+            "name": "Chouquettes",
+            "desc": "Parfait à partager",
+            "price": "—"
+          }
+        ]
+      },
+      {
+        "id": "patisseries",
+        "title": "Pâtisseries",
+        "subtitle": "Quelques essentiels",
+        "items": [
+          {
+            "name": "Éclair",
+            "desc": "Chocolat / café (selon dispo)",
+            "price": "—"
+          },
+          {
+            "name": "Tarte du jour",
+            "desc": "Fruits / citron (selon saison)",
+            "price": "—"
+          }
+        ]
+      },
+      {
+        "id": "snacking",
+        "title": "Snacking",
+        "subtitle": "Classique et efficace",
+        "items": [
+          {
+            "name": "Jambon-beurre",
+            "desc": "Baguette, jambon, beurre",
+            "price": "—"
+          },
+          {
+            "name": "Poulet crudités",
+            "desc": "Selon préparation",
+            "price": "—"
+          }
+        ]
+      },
+      {
+        "id": "boissons",
+        "title": "Boissons",
+        "subtitle": "Chaudes & fraîches",
+        "items": [
+          {
+            "name": "Café",
+            "desc": "Court / allongé",
+            "price": "—"
+          },
+          {
+            "name": "Eau / soda",
+            "desc": "Formats selon disponibilité",
+            "price": "—"
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "pageTitle": "À propos — Boulangerie du Sud",
+    "intro": "Une boulangerie de quartier, avec une approche simple : régularité, produits essentiels, et un accueil soigné. Ici, la “qualité” se voit surtout dans le quotidien.",
+    "cards": [
+      {
+        "title": "Savoir-faire",
+        "text": "Pains traditionnels, viennoiseries et production régulière, pensée pour le flux du quartier.",
+        "badge": "Artisanal"
+      },
+      {
+        "title": "Ingrédients",
+        "text": "Priorité aux bases : farine, levure/levain selon recettes, et contrôle de la cuisson.",
+        "badge": "Essentiel"
+      },
+      {
+        "title": "Service",
+        "text": "Une vitrine claire, des informations pratiques, et des offres du moment visibles.",
+        "badge": "Clair"
+      }
+    ],
+    "commitmentsTitle": "Engagements simples",
+    "commitments": [
+      "Une base de produits stable, compréhensible.",
+      "Des offres ponctuelles annoncées clairement.",
+      "Informations pratiques à jour (horaires, adresse, contact)."
+    ]
+  },
+  "contact": {
+    "pageTitle": "Contact — Boulangerie du Sud",
+    "intro": "Pour toute question (produits, disponibilités, informations), contactez-nous.",
+    "cards": [
+      {
+        "title": "Adresse",
+        "lines": [
+          "67 Avenue du Prado",
+          "13006 Marseille"
+        ],
+        "badge": "Quartier Prado"
+      },
+      {
+        "title": "Horaires",
+        "lines": [
+          "Ouvert tous les jours",
+          "7h00 — 19h00"
+        ],
+        "badge": "Sans réservation"
+      },
+      {
+        "title": "Contact",
+        "lines": [
+          "04 91 55 12 34",
+          "contact@boulangeriedusud.fr"
+        ],
+        "badge": "Réponse rapide"
+      }
+    ],
+    "planTitle": "Plan",
+    "planText": "(Option) Tu pourras intégrer une carte Google Maps ici plus tard. Pour l’instant, on garde le site léger et très propre."
+  }
+}

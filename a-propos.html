@@ -10,8 +10,8 @@
 <header>
   <div class="container topbar">
     <div class="brand">
-      <strong>Boulangerie du Sud</strong>
-      <span>67 Avenue du Prado, 13006 Marseille</span>
+      <strong id="siteNameHeader">Boulangerie du Sud</strong>
+      <span id="siteAddressHeader">67 Avenue du Prado, 13006 Marseille</span>
     </div>
     <nav class="nav">
       <a href="index.html">Accueil</a>
@@ -25,46 +25,32 @@
 
 <main class="container">
   <section class="card" style="margin:26px 0 12px;">
-    <h1 style="margin:0 0 10px;font-size:34px;letter-spacing:-.4px;">À propos</h1>
-    <p style="margin:0;color:var(--muted);max-width:75ch;">
+    <h1 id="aboutTitle" style="margin:0 0 10px;font-size:34px;letter-spacing:-.4px;">À propos</h1>
+    <p id="aboutIntro" style="margin:0;color:var(--muted);max-width:75ch;">
       Une boulangerie de quartier, avec une approche simple : régularité, produits essentiels,
       et un accueil soigné. Ici, la “qualité” se voit surtout dans le quotidien.
     </p>
   </section>
 
-  <section class="grid">
-    <article class="item">
-      <h3>Savoir-faire</h3>
-      <p>Pains traditionnels, viennoiseries et production régulière, pensée pour le flux du quartier.</p>
-      <span class="badge">Artisanal</span>
-    </article>
-    <article class="item">
-      <h3>Ingrédients</h3>
-      <p>Priorité aux bases : farine, levure/levain selon recettes, et contrôle de la cuisson.</p>
-      <span class="badge">Essentiel</span>
-    </article>
-    <article class="item">
-      <h3>Service</h3>
-      <p>Une vitrine claire, des informations pratiques, et des offres du moment visibles.</p>
-      <span class="badge">Clair</span>
-    </article>
+  <section class="grid" id="aboutCards">
+    <!-- Rempli via JSON -->
   </section>
 
   <hr>
 
   <section class="card">
-    <h2 style="margin:0 0 8px;font-size:22px;">Engagements simples</h2>
-    <ul style="margin:0;padding-left:18px;color:var(--muted)">
-      <li>Une base de produits stable, compréhensible.</li>
-      <li>Des offres ponctuelles annoncées clairement.</li>
-      <li>Informations pratiques à jour (horaires, adresse, contact).</li>
+    <h2 id="aboutCommitmentsTitle" style="margin:0 0 8px;font-size:22px;">Engagements simples</h2>
+    <ul id="aboutCommitments" style="margin:0;padding-left:18px;color:var(--muted)">
+      <!-- Rempli via JSON -->
     </ul>
   </section>
 
   <footer class="footer">
-    <div>© Boulangerie du Sud</div>
-    <div>67 Avenue du Prado • Marseille 13006</div>
+    <div id="footerLine1">© Boulangerie du Sud</div>
+    <div id="footerLine2">67 Avenue du Prado • Marseille 13006</div>
   </footer>
 </main>
+
+<script src="script.js"></script>
 </body>
 </html>
