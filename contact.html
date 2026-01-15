@@ -10,8 +10,8 @@
 <header>
   <div class="container topbar">
     <div class="brand">
-      <strong>Boulangerie du Sud</strong>
-      <span>67 Avenue du Prado, 13006 Marseille</span>
+      <strong id="siteNameHeader">Boulangerie du Sud</strong>
+      <span id="siteAddressHeader">67 Avenue du Prado, 13006 Marseille</span>
     </div>
     <nav class="nav">
       <a href="index.html">Accueil</a>
@@ -25,46 +25,32 @@
 
 <main class="container">
   <section class="card" style="margin:26px 0 12px;">
-    <h1 style="margin:0 0 10px;font-size:34px;letter-spacing:-.4px;">Contact</h1>
-    <p style="margin:0;color:var(--muted);">
+    <h1 id="contactTitle" style="margin:0 0 10px;font-size:34px;letter-spacing:-.4px;">Contact</h1>
+    <p id="contactIntro" style="margin:0;color:var(--muted);">
       Pour toute question (produits, disponibilités, informations), contactez-nous.
     </p>
   </section>
 
-  <section class="grid">
-    <article class="item">
-      <h3>Adresse</h3>
-      <p>67 Avenue du Prado<br>13006 Marseille</p>
-      <span class="badge">Quartier Prado</span>
-    </article>
-
-    <article class="item">
-      <h3>Horaires</h3>
-      <p>Ouvert tous les jours<br><strong>7h00 — 19h00</strong></p>
-      <span class="badge">Sans réservation</span>
-    </article>
-
-    <article class="item">
-      <h3>Contact</h3>
-      <p>04 91 55 12 34<br>contact@boulangeriedusud.fr</p>
-      <span class="badge">Réponse rapide</span>
-    </article>
+  <section class="grid" id="contactCards">
+    <!-- Rempli via JSON -->
   </section>
 
   <hr>
 
   <section class="card">
-    <h2 style="margin:0 0 8px;font-size:22px;">Plan</h2>
-    <p style="margin:0;color:var(--muted);">
+    <h2 id="contactPlanTitle" style="margin:0 0 8px;font-size:22px;">Plan</h2>
+    <p id="contactPlanText" style="margin:0;color:var(--muted);">
       (Option) Tu pourras intégrer une carte Google Maps ici plus tard.
       Pour l’instant, on garde le site léger et très propre.
     </p>
   </section>
 
   <footer class="footer">
-    <div>© Boulangerie du Sud</div>
-    <div>04 91 55 12 34 • contact@boulangeriedusud.fr</div>
+    <div id="footerLine1">© Boulangerie du Sud</div>
+    <div id="footerLine2">04 91 55 12 34 • contact@boulangeriedusud.fr</div>
   </footer>
 </main>
+
+<script src="script.js"></script>
 </body>
 </html>
