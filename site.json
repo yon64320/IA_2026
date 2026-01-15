@@ -209,6 +209,18 @@
             "description": "Roulé exotique mangue",
             "image": null,
             "tags": []
+          },
+          {
+            "id": "mango-roll",
+            "name": "Mango Roll",
+            "price": 4.9,
+            "currency": "EUR",
+            "description": "Roulé exotique mangue",
+            "image": null,
+            "tags": [
+              "viennoiserie",
+              "mangue"
+            ]
           }
         ]
       }
