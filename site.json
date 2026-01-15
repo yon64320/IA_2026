@@ -195,6 +195,23 @@
           }
         ]
       }
+    ],
+    "sections": [
+      {
+        "id": "auto",
+        "name": "viennoiseries",
+        "items": [
+          {
+            "id": "mango-roll",
+            "name": "Mango Roll",
+            "price": 4.9,
+            "currency": "EUR",
+            "description": "Roulé exotique à la mangue.",
+            "image": null,
+            "tags": []
+          }
+        ]
+      }
     ]
   },
   "about": {
