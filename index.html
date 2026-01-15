@@ -10,8 +10,8 @@
 <header>
   <div class="container topbar">
     <div class="brand">
-      <strong>Boulangerie du Sud</strong>
-      <span>67 Avenue du Prado, 13006 Marseille</span>
+      <strong id="siteNameHeader">Boulangerie du Sud</strong>
+      <span id="siteAddressHeader">67 Avenue du Prado, 13006 Marseille</span>
     </div>
     <nav class="nav">
       <a class="active" href="index.html">Accueil</a>
@@ -26,9 +26,9 @@
 <main class="container">
   <section class="hero">
     <div class="card">
-      <h1>Le goût juste, chaque jour.</h1>
-      <p>
-        KIKIKIKIKI OUI Bienvenue chez Yon Bienvenue chez Yon Boulangerie artisanale à Marseille (Prado). Pains traditionnels, viennoiseries, pâtisseries,
+      <h1 id="homeHeroTitle">Le goût juste, chaque jour.</h1>
+      <p id="homeHeroText">
+        Boulangerie artisanale à Marseille (Prado). Pains traditionnels, viennoiseries, pâtisseries,
         snacking et boissons — avec une sélection simple, soignée, et régulière.
       </p>
       <hr>
@@ -36,86 +36,56 @@
         <div class="row">
           <div class="left">
             <div class="name">Horaires</div>
-            <div class="desc">Ouvert tous les jours</div>
+            <div class="desc" id="homeHoursDesc">Ouvert tous les jours</div>
           </div>
-          <div class="price">7h00 — 19h00</div>
+          <div class="price" id="homeHours">7h00 — 19h00</div>
         </div>
         <div class="row">
           <div class="left">
             <div class="name">Adresse</div>
-            <div class="desc">Accès métro/bus Prado (selon lignes)</div>
+            <div class="desc" id="homeAddressDesc">Accès métro/bus Prado (selon lignes)</div>
           </div>
-          <div class="price">13006</div>
+          <div class="price" id="homeZip">13006</div>
         </div>
         <div class="row">
           <div class="left">
             <div class="name">Contact</div>
-            <div class="desc">04 91 55 12 34 • contact@boulangeriedusud.fr</div>
+            <div class="desc" id="homeContact">04 91 55 12 34 • contact@boulangeriedusud.fr</div>
           </div>
-          <div class="price">Appeler</div>
+          <div class="price" id="homeCallCta">Appeler</div>
         </div>
       </div>
     </div>
 
     <div class="kv">
-      <div class="tag">Vitrine • Sérieux • Premium chaleureux</div>
-      <div class="meta">
+      <div class="tag" id="homeKvTag">Vitrine • Sérieux • Premium chaleureux</div>
+      <div class="meta" id="homeKvMeta">
         Une présentation épurée, centrée sur l’essentiel : la qualité, la régularité, l’accueil.
       </div>
     </div>
   </section>
 
   <div class="section-title">
-    <h2>Offres & formules</h2>
-    <p>Exemples d’offres simples (modifiables à tout moment)</p>
+    <h2 id="homeOffersTitle">Offres & formules</h2>
+    <p id="homeOffersSubtitle">Exemples d’offres simples (modifiables à tout moment)</p>
   </div>
 
-  <section class="grid">
-    <article class="item">
-      <h3>Formule Viennoiseries</h3>
-      <p>3 croissants + 3 chocolatines</p>
-      <span class="badge">Offre du matin</span>
-    </article>
-
-    <article class="item">
-      <h3>Chouquettes</h3>
-      <p>4 chouquettes offertes dès 10 achetées</p>
-      <span class="badge">Idéal à partager</span>
-    </article>
-
-    <article class="item">
-      <h3>Pause café</h3>
-      <p>Café + viennoiserie (selon disponibilité)</p>
-      <span class="badge">Rapide & efficace</span>
-    </article>
+  <section class="grid" id="homeOffersGrid">
+    <!-- Rempli via JSON -->
   </section>
 
   <div class="section-title">
-    <h2>Produits phares</h2>
-    <p>Une base stable, des variantes selon saison</p>
+    <h2 id="homeFeaturedTitle">Produits phares</h2>
+    <p id="homeFeaturedSubtitle">Une base stable, des variantes selon saison</p>
   </div>
 
-  <section class="grid">
-    <article class="item">
-      <h3>Pain tradition</h3>
-      <p>Croûte fine, mie équilibrée — parfait au quotidien.</p>
-      <span class="badge">Classique</span>
-    </article>
-    <article class="item">
-      <h3>Viennoiseries</h3>
-      <p>Croissants, chocolatines, brioches — dorés, réguliers.</p>
-      <span class="badge">Matin</span>
-    </article>
-    <article class="item">
-      <h3>Snacking</h3>
-      <p>Sandwichs classiques, préparations simples et fraîches.</p>
-      <span class="badge">Midi</span>
-    </article>
+  <section class="grid" id="homeFeaturedGrid">
+    <!-- Rempli via JSON -->
   </section>
 
   <footer class="footer">
-    <div>© Boulangerie du Sud — 67 Avenue du Prado, 13006 Marseille</div>
-    <div>7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</div>
+    <div id="footerLine1">© Boulangerie du Sud — 67 Avenue du Prado, 13006 Marseille</div>
+    <div id="footerLine2">7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</div>
   </footer>
 </main>
 
@@ -124,24 +94,22 @@
   <div class="modal" id="offersModal" role="dialog" aria-modal="true" aria-label="Offres du moment">
     <div class="modal-top">
       <div>
-        <h3>Offres du moment</h3>
-        <p>Affichage simple (tu pourras modifier le contenu facilement).</p>
+        <h3 id="offersModalTitle">Offres du moment</h3>
+        <p id="offersModalSubtitle">Affichage simple (tu pourras modifier le contenu facilement).</p>
       </div>
       <button class="btn" id="closeOffersBtn" type="button">Fermer</button>
     </div>
 
-    <ul>
-      <li><strong>3 croissants + 3 chocolatines</strong> — formule viennoiseries (matin)</li>
-      <li><strong>Chouquettes</strong> — 4 offertes dès 10 achetées</li>
-      <li><strong>Pause café</strong> — café + viennoiserie (selon dispo)</li>
+    <ul id="offersModalList">
+      <!-- Rempli via JSON -->
     </ul>
 
     <div class="modal-actions">
-      <button class="btn primary" type="button" onclick="closeOffers()">OK</button>
+      <button class="btn primary" id="offersOkBtn" type="button" onclick="closeOffers()">OK</button>
       <button class="btn" id="dontShowTodayBtn" type="button">Ne plus afficher aujourd’hui</button>
     </div>
 
-    <div class="small" style="margin-top:10px;">
+    <div class="small" id="offersTip" style="margin-top:10px;">
       Astuce : tu peux aussi ouvrir ce pop-up via le bouton “Offres du moment” en haut.
     </div>
   </div>
