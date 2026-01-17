@@ -129,8 +129,8 @@
         "items": [
           {
             "name": "Croissant",
-            "desc": "Beurré, doré",
-            "price": "—"
+            "desc": "Croissant traditionnel au beurre.",
+            "price": "2€"
           },
           {
             "name": "Chocolatine",
@@ -146,9 +146,7 @@
             "name": "Mango Roll",
             "desc": "Roulé exotique mangue",
             "price": "4,90€"
-          }
-        ],
-        "products.categories[].items": [
+          },
           {
             "name": "Croissant",
             "desc": "Croissant traditionnel au beurre.",
