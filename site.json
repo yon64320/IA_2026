@@ -141,6 +141,11 @@
             "name": "Chouquettes",
             "desc": "Parfait à partager",
             "price": "—"
+          },
+          {
+            "name": "Mango Roll",
+            "desc": "Roulé exotique mangue",
+            "price": "4,90€"
           }
         ]
       },
