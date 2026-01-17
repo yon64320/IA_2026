@@ -1,120 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boulangerie du Sud — Marseille Prado</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boulangerie du Sud</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="home">
-<header>
-  <div class="container topbar">
-    <div class="brand">
-      <strong id="siteNameHeader">Boulangerie du Sud</strong>
-      <span id="siteAddressHeader">67 Avenue du Prado, 13006 Marseille</span>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Boulangerie du Sud</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Accueil</a></li>
+        <li><a href="produits.html" class="nav-link">Produits</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-    <nav class="nav">
-      <a class="active" href="index.html">Accueil</a>
-      <a href="produits.html">Produits</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-      <a class="primary" id="openOffersBtn" href="javascript:void(0)">Offres du moment</a>
-    </nav>
-  </div>
-</header>
+  </nav>
 
-<main class="container">
+  <!-- HERO SECTION -->
   <section class="hero">
-    <div class="card">
-      <h1 id="homeHeroTitle">Le goût juste, chaque jour.</h1>
-      <p id="homeHeroText">
-        Boulangerie artisanale à Marseille (Prado). Pains traditionnels, viennoiseries, pâtisseries,
-        snacking et boissons — avec une sélection simple, soignée, et régulière.
+    <div class="hero-content">
+      <h1 class="hero-title">Le goût juste, chaque jour.</h1>
+      <p class="hero-text">
+        Bienvenue chez Yon. Boulangerie artisanale à Marseille (Prado). Pains traditionnels, viennoiseries, pâtisseries, snacking et boissons — avec une sélection simple, soignée, et régulière.
       </p>
-      <hr>
-      <div class="list">
-        <div class="row">
-          <div class="left">
-            <div class="name">Horaires</div>
-            <div class="desc" id="homeHoursDesc">Ouvert tous les jours</div>
-          </div>
-          <div class="price" id="homeHours">7h00 — 19h00</div>
-        </div>
-        <div class="row">
-          <div class="left">
-            <div class="name">Adresse</div>
-            <div class="desc" id="homeAddressDesc">Accès métro/bus Prado (selon lignes)</div>
-          </div>
-          <div class="price" id="homeZip">13006</div>
-        </div>
-        <div class="row">
-          <div class="left">
-            <div class="name">Contact</div>
-            <div class="desc" id="homeContact">04 91 55 12 34 • contact@boulangeriedusud.fr</div>
-          </div>
-          <div class="price" id="homeCallCta">Appeler</div>
-        </div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Nous rendre visite aujourd'hui</a>
       </div>
-    </div>
-
-    <div class="kv">
-      <div class="tag" id="homeKvTag">Vitrine • Sérieux • Premium chaleureux</div>
-      <div class="meta" id="homeKvMeta">
-        Une présentation épurée, centrée sur l’essentiel : la qualité, la régularité, l’accueil.
+      <div class="hero-trust">
+        <span class="trust-badge">Artisan boulanger</span>
+        <span class="trust-badge">Fait maison chaque jour</span>
+        <span class="trust-badge">Depuis 20 ans</span>
       </div>
     </div>
   </section>
 
-  <div class="section-title">
-    <h2 id="homeOffersTitle">Offres & formules</h2>
-    <p id="homeOffersSubtitle">Exemples d’offres simples (modifiables à tout moment)</p>
-  </div>
-
-  <section class="grid" id="homeOffersGrid">
-    <!-- Rempli via JSON -->
+  <!-- FEATURE SECTION 1: LEFT IMAGE / RIGHT TEXT - Craftsmanship -->
+  <section class="feature feature-left">
+    <div class="feature-image">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Background -->
+        <rect width="400" height="300" fill="#f5ebe0"/>
+        <!-- Baguettes -->
+        <ellipse cx="100" cy="150" rx="8" ry="120" fill="#d4a574" opacity="0.9"/>
+        <ellipse cx="100" cy="150" rx="6" ry="115" fill="#e8c5a0"/>
+        <ellipse cx="120" cy="150" rx="8" ry="120" fill="#d4a574" opacity="0.9"/>
+        <ellipse cx="120" cy="150" rx="6" ry="115" fill="#e8c5a0"/>
+        <!-- Sourdough bread -->
+        <circle cx="250" cy="150" r="50" fill="#c9a876"/>
+        <circle cx="250" cy="150" r="45" fill="#d4a574"/>
+        <path d="M 200 150 Q 250 120 300 150" stroke="#b8956a" stroke-width="2" fill="none"/>
+        <path d="M 200 150 Q 250 180 300 150" stroke="#b8956a" stroke-width="2" fill="none"/>
+        <!-- Decorative lines -->
+        <line x1="50" y1="50" x2="350" y2="50" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+        <line x1="50" y1="250" x2="350" y2="250" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="feature-content">
+      <h2 class="feature-title">Le goût du vrai savoir-faire</h2>
+      <p class="feature-text">
+        Nos pains naissent d'une fermentation lente au levain naturel, développée sur plusieurs jours. 
+        Cette méthode ancestrale transforme les farines de qualité en saveurs complexes et en textures incomparables. 
+        Chaque miche, chaque baguette porte la marque du temps et de l'attention : des croûtes dorées et croustillantes, 
+        des alvéoles généreuses, un cœur moelleux et parfumé. Nous sélectionnons nos farines auprès de meuniers locaux, 
+        et nous n'utilisons que des ingrédients naturels, sans additifs ni conservateurs.
+      </p>
+    </div>
   </section>
 
-  <div class="section-title">
-    <h2 id="homeFeaturedTitle">Produits phares</h2>
-    <p id="homeFeaturedSubtitle">Une base stable, des variantes selon saison</p>
-  </div>
-
-  <section class="grid" id="homeFeaturedGrid">
-    <!-- Rempli via JSON -->
+  <!-- FEATURE SECTION 2: RIGHT IMAGE / LEFT TEXT - Viennoiseries -->
+  <section class="feature feature-right">
+    <div class="feature-content">
+      <h2 class="feature-title">Des viennoiseries qui réveillent vos matins</h2>
+      <p class="feature-text">
+        Imaginez l'odeur du beurre AOP qui caramélise doucement dans le four, le craquement d'une croûte feuilletée 
+        sous vos doigts, la douceur d'une pâte qui fond en bouche. Nos croissants, pains au chocolat et brioches 
+        sont façonnés chaque nuit pour être prêts à votre réveil. Chaque couche de pâte révèle des années de pratique, 
+        chaque bouchée est un moment de pure indulgence. C'est ainsi que nous aimons commencer la journée : 
+        avec quelque chose de vraiment bon, qui réchauffe le cœur et éveille les sens.
+      </p>
+    </div>
+    <div class="feature-image">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Background -->
+        <rect width="400" height="300" fill="#f5ebe0"/>
+        <!-- Croissant -->
+        <path d="M 150 150 Q 180 120 210 150 Q 180 180 150 150" fill="#f4d03f" opacity="0.9"/>
+        <path d="M 150 150 Q 180 130 210 150" stroke="#e8c5a0" stroke-width="2" fill="none"/>
+        <path d="M 150 150 Q 180 170 210 150" stroke="#d4a574" stroke-width="1" fill="none"/>
+        <!-- Pain au chocolat -->
+        <rect x="240" y="120" width="60" height="60" rx="5" fill="#d4a574" opacity="0.9"/>
+        <rect x="245" y="125" width="50" height="50" rx="3" fill="#e8c5a0"/>
+        <line x1="250" y1="150" x2="290" y2="150" stroke="#8b6914" stroke-width="2"/>
+        <line x1="270" y1="130" x2="270" y2="170" stroke="#8b6914" stroke-width="2"/>
+        <!-- Brioche -->
+        <circle cx="100" cy="200" r="25" fill="#f4d03f" opacity="0.9"/>
+        <circle cx="100" cy="200" r="20" fill="#f9e79f"/>
+        <circle cx="95" cy="195" r="3" fill="#d4a574"/>
+        <circle cx="105" cy="195" r="3" fill="#d4a574"/>
+        <!-- Decorative elements -->
+        <line x1="50" y1="50" x2="350" y2="50" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+        <line x1="50" y1="250" x2="350" y2="250" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+      </svg>
+    </div>
   </section>
 
-  <footer class="footer">
-    <div id="footerLine1">© Boulangerie du Sud — 67 Avenue du Prado, 13006 Marseille</div>
-    <div id="footerLine2">7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</div>
+  <!-- FEATURE SECTION 3: LEFT IMAGE / RIGHT TEXT - Neighborhood -->
+  <section class="feature feature-left">
+    <div class="feature-image">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Background -->
+        <rect width="400" height="300" fill="#f5ebe0"/>
+        <!-- Shop front -->
+        <rect x="100" y="80" width="200" height="180" fill="#e8c5a0" opacity="0.8"/>
+        <rect x="110" y="90" width="180" height="160" fill="#ffffff"/>
+        <!-- Window -->
+        <rect x="120" y="100" width="80" height="70" fill="#f5ebe0" stroke="#d4a574" stroke-width="2"/>
+        <rect x="210" y="100" width="80" height="70" fill="#f5ebe0" stroke="#d4a574" stroke-width="2"/>
+        <!-- Door -->
+        <rect x="160" y="180" width="60" height="70" fill="#c9a876" stroke="#b8956a" stroke-width="2"/>
+        <circle cx="210" cy="215" r="3" fill="#8b6914"/>
+        <!-- Counter inside -->
+        <rect x="130" y="200" width="140" height="8" fill="#d4a574" opacity="0.6"/>
+        <!-- Bread on counter -->
+        <ellipse cx="160" cy="195" rx="12" ry="8" fill="#d4a574"/>
+        <ellipse cx="200" cy="195" rx="12" ry="8" fill="#d4a574"/>
+        <ellipse cx="240" cy="195" rx="12" ry="8" fill="#d4a574"/>
+        <!-- Sign -->
+        <rect x="140" y="50" width="120" height="25" fill="#c9a876" rx="3"/>
+        <text x="200" y="67" text-anchor="middle" font-family="serif" font-size="14" fill="#ffffff">BOULANGERIE</text>
+        <!-- Decorative lines -->
+        <line x1="50" y1="50" x2="350" y2="50" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+        <line x1="50" y1="250" x2="350" y2="250" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="feature-content">
+      <h2 class="feature-title">Votre boulangerie de quartier</h2>
+      <p class="feature-text">
+        Plus qu'un simple commerce, nous sommes un lieu de rencontre et de partage. Chaque matin, nous accueillons 
+        nos clients avec le sourire, en prenant le temps d'échanger quelques mots. Nous connaissons les préférences de chacun, 
+        nous préparons les commandes à l'avance pour les habitués pressés, et nous conseillons ceux qui découvrent nos produits. 
+        Ici, on se sent chez soi. Les familles viennent le week-end choisir leur pain du dimanche, les travailleurs 
+        font une pause pour un café et une viennoiserie, les enfants repartent avec un sourire et un cookie. 
+        C'est cette proximité, cette humanité, qui fait de nous bien plus qu'une boulangerie : un pilier de votre quotidien.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="cta-section" id="contact">
+    <div class="cta-content">
+      <h2 class="cta-title">Et si votre journée commençait par quelque chose de vraiment bon ?</h2>
+      <p class="cta-text">
+        Passez nous voir dès demain matin. Découvrez nos pains encore chauds, nos viennoiseries croustillantes, 
+        et l'accueil chaleureux de notre équipe. Nous sommes là pour vous, chaque jour, avec le même engagement 
+        envers la qualité et le service.
+      </p>
+      <div class="cta-button-wrapper">
+        <a href="#contact-info" class="btn btn-primary btn-large">Voir l'adresse et les horaires</a>
+      </div>
+    </div>
+    <div class="contact-info" id="contact-info">
+      <div class="contact-card">
+        <h3>Adresse</h3>
+        <p>67 Avenue du Prado<br>13006 Marseille</p>
+      </div>
+      <div class="contact-card">
+        <h3>Horaires</h3>
+        <p>Lundi - Dimanche<br>7h00 — 19h00</p>
+      </div>
+      <div class="contact-card">
+        <h3>Contact</h3>
+        <p>04 91 55 12 34<br>contact@boulangeriedusud.fr</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <p>© 2024 Boulangerie du Sud — 67 Avenue du Prado, 13006 Marseille</p>
+    <p>7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</p>
   </footer>
-</main>
 
-<!-- Modal Offres -->
-<div class="modal-backdrop" id="offersBackdrop" aria-hidden="true">
-  <div class="modal" id="offersModal" role="dialog" aria-modal="true" aria-label="Offres du moment">
-    <div class="modal-top">
-      <div>
-        <h3 id="offersModalTitle">Offres du moment</h3>
-        <p id="offersModalSubtitle">Affichage simple (tu pourras modifier le contenu facilement).</p>
-      </div>
-      <button class="btn" id="closeOffersBtn" type="button">Fermer</button>
-    </div>
-
-    <ul id="offersModalList">
-      <!-- Rempli via JSON -->
-    </ul>
-
-    <div class="modal-actions">
-      <button class="btn primary" id="offersOkBtn" type="button" onclick="closeOffers()">OK</button>
-      <button class="btn" id="dontShowTodayBtn" type="button">Ne plus afficher aujourd’hui</button>
-    </div>
-
-    <div class="small" id="offersTip" style="margin-top:10px;">
-      Astuce : tu peux aussi ouvrir ce pop-up via le bouton “Offres du moment” en haut.
-    </div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
