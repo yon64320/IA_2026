@@ -1,56 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos — Boulangerie du Sud</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="apropos">
-<header>
-  <div class="container topbar">
-    <div class="brand">
-      <strong id="siteNameHeader">Boulangerie du Sud</strong>
-      <span id="siteAddressHeader">67 Avenue du Prado, 13006 Marseille</span>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Boulangerie du Sud</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="produits.html" class="nav-link">Produits</a></li>
+        <li><a href="a-propos.html" class="nav-link active">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a href="produits.html">Produits</a>
-      <a class="active" href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-      <a class="primary" href="index.html">Offres du moment</a>
-    </nav>
-  </div>
-</header>
+  </nav>
 
-<main class="container">
-  <section class="card" style="margin:26px 0 12px;">
-    <h1 id="aboutTitle" style="margin:0 0 10px;font-size:34px;letter-spacing:-.4px;">À propos</h1>
-    <p id="aboutIntro" style="margin:0;color:var(--muted);max-width:75ch;">
-      Une boulangerie de quartier, avec une approche simple : régularité, produits essentiels,
-      et un accueil soigné. Ici, la “qualité” se voit surtout dans le quotidien.
-    </p>
+  <!-- ABOUT PAGE -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1 class="page-title">À propos de nous</h1>
+      <p class="page-subtitle">
+        Une boulangerie de quartier avec une approche simple : régularité, produits essentiels, 
+        et un accueil soigné. Ici, la qualité se voit surtout dans le quotidien.
+      </p>
+    </div>
   </section>
 
-  <section class="grid" id="aboutCards">
-    <!-- Rempli via JSON -->
+  <section class="about-section">
+    <div class="about-content">
+      <div class="about-text-block">
+        <h2>Notre histoire</h2>
+        <p>
+          Depuis plus de vingt ans, la Boulangerie du Sud perpétue un savoir-faire artisanal 
+          au cœur de Marseille. Fondée avec la conviction que le bon pain se fait chaque jour, 
+          avec patience et passion, nous avons su créer un lieu où tradition et qualité se rencontrent.
+        </p>
+        <p>
+          Chaque matin, nos boulangers façonnent à la main des produits frais, en utilisant 
+          des méthodes traditionnelles et des ingrédients sélectionnés. Nous croyons que 
+          le meilleur pain naît du temps, de la fermentation lente, et de l'attention portée 
+          à chaque étape de la fabrication.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="300" fill="#f5ebe0"/>
+          <!-- Baker at work -->
+          <circle cx="200" cy="120" r="30" fill="#d4a574"/>
+          <rect x="170" y="150" width="60" height="80" fill="#c9a876" rx="5"/>
+          <ellipse cx="200" cy="230" rx="40" ry="15" fill="#8b6914"/>
+          <!-- Hands working with dough -->
+          <ellipse cx="150" cy="180" rx="20" ry="15" fill="#f9e79f" opacity="0.8"/>
+          <ellipse cx="250" cy="180" rx="20" ry="15" fill="#f9e79f" opacity="0.8"/>
+          <!-- Decorative elements -->
+          <line x1="50" y1="50" x2="350" y2="50" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+          <line x1="50" y1="250" x2="350" y2="250" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
   </section>
 
-  <hr>
-
-  <section class="card">
-    <h2 id="aboutCommitmentsTitle" style="margin:0 0 8px;font-size:22px;">Engagements simples</h2>
-    <ul id="aboutCommitments" style="margin:0;padding-left:18px;color:var(--muted)">
-      <!-- Rempli via JSON -->
-    </ul>
+  <section class="values-section">
+    <h2 class="section-heading">Nos valeurs</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🍞</div>
+        <h3>Qualité artisanale</h3>
+        <p>Chaque produit est fabriqué à la main avec des méthodes traditionnelles, en respectant le temps nécessaire à chaque étape.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌾</div>
+        <h3>Ingrédients sélectionnés</h3>
+        <p>Nous travaillons avec des farines de qualité, du beurre AOP, et des ingrédients naturels, sans additifs ni conservateurs.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">❤️</div>
+        <h3>Proximité et convivialité</h3>
+        <p>Nous sommes une boulangerie de quartier où chacun se sent accueilli et où les relations humaines comptent.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🕐</div>
+        <h3>Fraîcheur quotidienne</h3>
+        <p>Tous nos produits sont cuits le jour même, garantissant une fraîcheur et un goût incomparables.</p>
+      </div>
+    </div>
   </section>
 
-  <footer class="footer">
-    <div id="footerLine1">© Boulangerie du Sud</div>
-    <div id="footerLine2">67 Avenue du Prado • Marseille 13006</div>
+  <section class="commitments-section">
+    <div class="commitments-content">
+      <h2 class="section-heading">Nos engagements</h2>
+      <ul class="commitments-list">
+        <li>Fermentation lente au levain naturel pour des saveurs authentiques</li>
+        <li>Fabrication quotidienne de tous nos produits sur place</li>
+        <li>Sélection rigoureuse de nos fournisseurs locaux</li>
+        <li>Accueil chaleureux et service personnalisé pour chaque client</li>
+        <li>Respect des saisons dans notre offre de pâtisseries</li>
+        <li>Transparence sur nos méthodes et nos ingrédients</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <p>&copy; 2024 Boulangerie du Sud — 67 Avenue du Prado, 13006 Marseille</p>
+    <p>7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</p>
   </footer>
-</main>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,46 +1,202 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produits — Boulangerie du Sud</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="produits">
-<header>
-  <div class="container topbar">
-    <div class="brand">
-      <strong id="siteNameHeader">Boulangerie du Sud</strong>
-      <span id="siteAddressHeader">67 Avenue du Prado, 13006 Marseille</span>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Boulangerie du Sud</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="produits.html" class="nav-link active">Produits</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a class="active" href="produits.html">Produits</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-      <a class="primary" href="index.html">Offres du moment</a>
-    </nav>
-  </div>
-</header>
+  </nav>
 
-<main class="container">
-  <section class="card" style="margin:26px 0 12px;">
-    <h1 id="productsTitle" style="margin:0 0 10px;font-size:34px;letter-spacing:-.4px;">Produits</h1>
-    <p id="productsIntro" style="margin:0;color:var(--muted);">
-      Sélection indicative. Certaines références varient selon la saison et les disponibilités.
-    </p>
+  <!-- PRODUCTS PAGE -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1 class="page-title">Nos produits</h1>
+      <p class="page-subtitle">
+        Une sélection de produits artisanaux, fabriqués chaque jour avec passion. 
+        Certaines références varient selon la saison et les disponibilités.
+      </p>
+    </div>
   </section>
 
-  <div id="productsSections">
-    <!-- Rempli via JSON -->
-  </div>
+  <!-- PAINS -->
+  <section class="products-section">
+    <h2 class="section-heading">Pains</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <ellipse cx="100" cy="75" rx="30" ry="50" fill="#d4a574"/>
+            <ellipse cx="100" cy="75" rx="25" ry="45" fill="#e8c5a0"/>
+            <path d="M 70 75 Q 100 60 130 75" stroke="#b8956a" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3>Pain au levain</h3>
+        <p>Fermentation lente, croûte dorée, saveurs complexes. Notre produit phare.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <ellipse cx="100" cy="75" rx="5" ry="60" fill="#d4a574"/>
+            <ellipse cx="100" cy="75" rx="4" ry="58" fill="#e8c5a0"/>
+          </svg>
+        </div>
+        <h3>Baguette tradition</h3>
+        <p>Baguette française classique, croustillante à l'extérieur, moelleuse à l'intérieur.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <circle cx="100" cy="75" r="35" fill="#c9a876"/>
+            <circle cx="100" cy="75" r="30" fill="#d4a574"/>
+          </svg>
+        </div>
+        <h3>Pain de campagne</h3>
+        <p>Pain rustique au goût prononcé, parfait pour accompagner vos repas.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <ellipse cx="100" cy="75" rx="25" ry="40" fill="#d4a574"/>
+            <ellipse cx="100" cy="75" rx="20" ry="35" fill="#e8c5a0"/>
+          </svg>
+        </div>
+        <h3>Pain complet</h3>
+        <p>Riche en fibres, au goût de noisette, pour une alimentation équilibrée.</p>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <div id="footerLine1">© Boulangerie du Sud</div>
-    <div id="footerLine2">7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</div>
+  <!-- VIENNOISERIES -->
+  <section class="products-section">
+    <h2 class="section-heading">Viennoiseries</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <path d="M 80 75 Q 100 50 120 75 Q 100 100 80 75" fill="#f4d03f" opacity="0.9"/>
+            <path d="M 80 75 Q 100 60 120 75" stroke="#e8c5a0" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3>Croissant au beurre</h3>
+        <p>Feuilleté à la perfection, au beurre AOP. Cuit chaque matin pour une fraîcheur optimale.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <rect x="70" y="50" width="60" height="50" rx="5" fill="#d4a574" opacity="0.9"/>
+            <rect x="75" y="55" width="50" height="40" rx="3" fill="#e8c5a0"/>
+            <line x1="80" y1="75" x2="120" y2="75" stroke="#8b6914" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Pain au chocolat</h3>
+        <p>Deux barres de chocolat noir, enveloppées dans une pâte feuilletée croustillante.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <circle cx="100" cy="75" r="30" fill="#f4d03f" opacity="0.9"/>
+            <circle cx="100" cy="75" r="25" fill="#f9e79f"/>
+          </svg>
+        </div>
+        <h3>Brioche</h3>
+        <p>Brioche moelleuse et légère, parfaite pour le petit-déjeuner ou le goûter.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <ellipse cx="100" cy="75" rx="35" ry="20" fill="#f4d03f" opacity="0.9"/>
+            <ellipse cx="100" cy="75" rx="30" ry="18" fill="#f9e79f"/>
+          </svg>
+        </div>
+        <h3>Chausson aux pommes</h3>
+        <p>Pommes fraîches dans une pâte feuilletée, saupoudré de sucre. Un classique indémodable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÂTISSERIES -->
+  <section class="products-section">
+    <h2 class="section-heading">Pâtisseries</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <circle cx="100" cy="75" r="40" fill="#d4a574" opacity="0.8"/>
+            <circle cx="100" cy="60" r="15" fill="#f9e79f"/>
+          </svg>
+        </div>
+        <h3>Tarte aux fruits</h3>
+        <p>Variation selon les saisons : fraises, abricots, pommes, poires. Pâte sablée maison.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <ellipse cx="100" cy="75" rx="30" ry="25" fill="#8b6914" opacity="0.8"/>
+            <ellipse cx="100" cy="70" rx="25" ry="20" fill="#c9a876"/>
+          </svg>
+        </div>
+        <h3>Éclair au chocolat</h3>
+        <p>Pâte à choux légère, crème pâtissière onctueuse, glaçage au chocolat noir.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <rect x="70" y="50" width="60" height="50" rx="5" fill="#f9e79f" opacity="0.9"/>
+            <ellipse cx="100" cy="75" rx="20" ry="15" fill="#f4d03f"/>
+          </svg>
+        </div>
+        <h3>Millefeuille</h3>
+        <p>Pâte feuilletée croustillante, crème pâtissière vanille, glaçage royal.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="200" height="150" fill="#f5ebe0"/>
+            <circle cx="100" cy="75" r="35" fill="#8b6914" opacity="0.8"/>
+            <circle cx="100" cy="75" r="30" fill="#c9a876"/>
+            <circle cx="100" cy="70" r="10" fill="#f9e79f"/>
+          </svg>
+        </div>
+        <h3>Paris-Brest</h3>
+        <p>Pâte à choux en couronne, praliné maison, poudre d'amandes. Un grand classique.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <p>&copy; 2024 Boulangerie du Sud — 67 Avenue du Prado, 13006 Marseille</p>
+    <p>7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</p>
   </footer>
-</main>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
