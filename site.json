@@ -129,6 +129,12 @@
             "name": "Pain aux céréales",
             "desc": "Mélange de graines et céréales",
             "price": "2,80"
+          },
+          {
+            "name": "Deux baguettes achetée, une offerte !",
+            "title": "Deux baguettes achetée, une offerte !",
+            "text": "Deux baguettes achetée, une offerte !",
+            "badge": "Offre"
           }
         ]
       },
