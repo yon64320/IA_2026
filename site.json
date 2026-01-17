@@ -166,6 +166,11 @@
             "name": "Chausson aux pommes",
             "desc": "Pommes fraîches, pâte feuilletée",
             "price": "2,50"
+          },
+          {
+            "name": "Croissant au caca",
+            "desc": "Croustillant et surprenant, un goût audacieux pour les aventuriers du palais.",
+            "price": "15,00€"
           }
         ]
       },
