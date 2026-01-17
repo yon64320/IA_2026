@@ -193,9 +193,25 @@
     const p = document.createElement('p');
     p.textContent = item.desc;
     
-    card.appendChild(image);
-    card.appendChild(h3);
-    card.appendChild(p);
+    // Price element
+    if (item.price && item.price !== '—' && item.price !== '-') {
+      const priceEl = document.createElement('div');
+      priceEl.className = 'product-price';
+      // Format price - add € if not already present
+      let priceText = item.price.trim();
+      if (!priceText.includes('€') && !priceText.toLowerCase().includes('euro')) {
+        priceText = priceText + ' €';
+      }
+      priceEl.textContent = priceText;
+      card.appendChild(image);
+      card.appendChild(h3);
+      card.appendChild(p);
+      card.appendChild(priceEl);
+    } else {
+      card.appendChild(image);
+      card.appendChild(h3);
+      card.appendChild(p);
+    }
     
     return card;
   }

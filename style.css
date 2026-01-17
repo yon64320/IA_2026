@@ -938,11 +938,20 @@ a:focus {
 }
 
 .product-card p {
-  padding: 0 var(--spacing-md) var(--spacing-md);
+  padding: 0 var(--spacing-md) var(--spacing-xs);
   margin: 0;
   color: var(--color-charcoal-light);
   font-size: 0.9375rem;
   line-height: 1.6;
+}
+
+.product-price {
+  padding: var(--spacing-xs) var(--spacing-md) var(--spacing-md);
+  margin: 0;
+  color: var(--color-charcoal);
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: var(--font-serif);
 }
 
 /* ===== PAGE FOOTER ===== */
