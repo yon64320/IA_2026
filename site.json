@@ -32,11 +32,11 @@
     ],
     "kv": {
       "tag": "Vitrine • Sérieux • Premium chaleureux",
-      "meta": "Une présentation épurée, centrée sur l’essentiel : la qualité, la régularité, l’accueil."
+      "meta": "Une présentation épurée, centrée sur l'essentiel : la qualité, la régularité, l'accueil."
     },
     "offersSection": {
       "title": "Offres & formules",
-      "subtitle": "Exemples d’offres simples (modifiables à tout moment)",
+      "subtitle": "Exemples d'offres simples (modifiables à tout moment)",
       "cards": [
         {
           "title": "Formule Viennoiseries",
@@ -93,7 +93,7 @@
           "text": "café + viennoiserie (selon dispo)"
         }
       ],
-      "hint": "Astuce : tu peux aussi ouvrir ce pop-up via le bouton “Offres du moment” en haut."
+      "hint": "Astuce : tu peux aussi ouvrir ce pop-up via le bouton \"Offres du moment\" en haut."
     }
   },
   "products": {
@@ -106,19 +106,29 @@
         "subtitle": "Classiques & traditionnels",
         "items": [
           {
-            "name": "Tradition",
-            "desc": "Format classique",
-            "price": "—"
+            "name": "Pain tradition",
+            "desc": "Format classique au levain naturel",
+            "price": "1,20"
           },
           {
             "name": "Baguette",
-            "desc": "Croustillante, régulière",
-            "price": "—"
+            "desc": "Croustillante, régulière, cuite le jour même",
+            "price": "1,10"
           },
           {
             "name": "Pain de campagne",
-            "desc": "Mie plus dense",
-            "price": "—"
+            "desc": "Mie plus dense, saveurs rustiques",
+            "price": "2,50"
+          },
+          {
+            "name": "Pain complet",
+            "desc": "Riche en fibres, goût de noisette",
+            "price": "2,20"
+          },
+          {
+            "name": "Pain aux céréales",
+            "desc": "Mélange de graines et céréales",
+            "price": "2,80"
           }
         ]
       },
@@ -129,18 +139,33 @@
         "items": [
           {
             "name": "Croissant",
-            "desc": "Beurré, doré",
-            "price": "—"
+            "desc": "Beurré, doré, feuilleté",
+            "price": "2,00"
           },
           {
             "name": "Chocolatine",
-            "desc": "Classique",
-            "price": "—"
+            "desc": "Pain au chocolat, classique",
+            "price": "1,80"
           },
           {
             "name": "Chouquettes",
-            "desc": "Parfait à partager",
-            "price": "—"
+            "desc": "Parfait à partager, douce et légère",
+            "price": "0,30"
+          },
+          {
+            "name": "Brioche",
+            "desc": "Moelleuse et parfumée",
+            "price": "2,20"
+          },
+          {
+            "name": "Pain aux raisins",
+            "desc": "Raisins secs et crème pâtissière",
+            "price": "2,40"
+          },
+          {
+            "name": "Chausson aux pommes",
+            "desc": "Pommes fraîches, pâte feuilletée",
+            "price": "2,50"
           }
         ]
       },
@@ -151,13 +176,33 @@
         "items": [
           {
             "name": "Éclair",
-            "desc": "Chocolat / café (selon dispo)",
-            "price": "—"
+            "desc": "Chocolat / café (selon disponibilité)",
+            "price": "3,50"
           },
           {
             "name": "Tarte du jour",
             "desc": "Fruits / citron (selon saison)",
-            "price": "—"
+            "price": "4,00"
+          },
+          {
+            "name": "Tarte aux fraises",
+            "desc": "Fraise de saison, crème pâtissière",
+            "price": "4,50"
+          },
+          {
+            "name": "Millefeuille",
+            "desc": "Pâte feuilletée, crème vanille",
+            "price": "4,20"
+          },
+          {
+            "name": "Paris-Brest",
+            "desc": "Praliné maison, poudre d'amandes",
+            "price": "4,80"
+          },
+          {
+            "name": "Flan pâtissier",
+            "desc": "Traditionnel, onctueux",
+            "price": "3,20"
           }
         ]
       },
@@ -168,13 +213,28 @@
         "items": [
           {
             "name": "Jambon-beurre",
-            "desc": "Baguette, jambon, beurre",
-            "price": "—"
+            "desc": "Baguette, jambon de qualité, beurre",
+            "price": "4,50"
           },
           {
             "name": "Poulet crudités",
-            "desc": "Selon préparation",
-            "price": "—"
+            "desc": "Blanc de poulet, salade, tomate",
+            "price": "5,50"
+          },
+          {
+            "name": "Saumon",
+            "desc": "Saumon fumé, beurre, salade",
+            "price": "6,50"
+          },
+          {
+            "name": "Végétarien",
+            "desc": "Fromage frais, légumes de saison",
+            "price": "4,80"
+          },
+          {
+            "name": "Quiche du jour",
+            "desc": "Quiche maison, salade verte",
+            "price": "5,80"
           }
         ]
       },
@@ -185,13 +245,33 @@
         "items": [
           {
             "name": "Café",
-            "desc": "Court / allongé",
-            "price": "—"
+            "desc": "Expresso / Allongé",
+            "price": "1,20"
           },
           {
-            "name": "Eau / soda",
-            "desc": "Formats selon disponibilité",
-            "price": "—"
+            "name": "Cappuccino",
+            "desc": "Café, lait mousseux",
+            "price": "2,50"
+          },
+          {
+            "name": "Thé",
+            "desc": "Variétés de thés au choix",
+            "price": "2,00"
+          },
+          {
+            "name": "Jus de fruits",
+            "desc": "Pressé ou en bouteille",
+            "price": "2,80"
+          },
+          {
+            "name": "Eau minérale",
+            "desc": "0,5L / 1,5L",
+            "price": "1,50"
+          },
+          {
+            "name": "Soda",
+            "desc": "Coca, Fanta, Sprite",
+            "price": "2,50"
           }
         ]
       }
@@ -199,21 +279,21 @@
   },
   "about": {
     "pageTitle": "À propos — Boulangerie du Sud",
-    "intro": "Une boulangerie de quartier, avec une approche simple : régularité, produits essentiels, et un accueil soigné. Ici, la “qualité” se voit surtout dans le quotidien.",
+    "intro": "Une boulangerie de quartier, avec une approche simple : régularité, produits essentiels, et un accueil soigné. Ici, la \"qualité\" se voit surtout dans le quotidien.",
     "cards": [
       {
         "title": "Savoir-faire",
-        "text": "Pains traditionnels, viennoiseries et production régulière, pensée pour le flux du quartier.",
+        "text": "Pains traditionnels, viennoiseries et production régulière, pensée pour le flux du quartier. Chaque produit est façonné avec attention et cuit à la perfection.",
         "badge": "Artisanal"
       },
       {
         "title": "Ingrédients",
-        "text": "Priorité aux bases : farine, levure/levain selon recettes, et contrôle de la cuisson.",
+        "text": "Priorité aux bases : farine, levure/levain selon recettes, et contrôle de la cuisson. Nous sélectionnons des ingrédients de qualité auprès de fournisseurs locaux.",
         "badge": "Essentiel"
       },
       {
         "title": "Service",
-        "text": "Une vitrine claire, des informations pratiques, et des offres du moment visibles.",
+        "text": "Une vitrine claire, des informations pratiques, et des offres du moment visibles. Nous accueillons chaque client avec le sourire et prenons le temps d'échanger.",
         "badge": "Clair"
       }
     ],
@@ -221,12 +301,14 @@
     "commitments": [
       "Une base de produits stable, compréhensible.",
       "Des offres ponctuelles annoncées clairement.",
-      "Informations pratiques à jour (horaires, adresse, contact)."
+      "Informations pratiques à jour (horaires, adresse, contact).",
+      "Fabrication quotidienne sur place pour garantir la fraîcheur.",
+      "Accueil chaleureux et service personnalisé."
     ]
   },
   "contact": {
     "pageTitle": "Contact — Boulangerie du Sud",
-    "intro": "Pour toute question (produits, disponibilités, informations), contactez-nous.",
+    "intro": "Pour toute question (produits, disponibilités, informations), contactez-nous. Nous sommes à votre écoute.",
     "cards": [
       {
         "title": "Adresse",
@@ -254,6 +336,6 @@
       }
     ],
     "planTitle": "Plan",
-    "planText": "(Option) Tu pourras intégrer une carte Google Maps ici plus tard. Pour l’instant, on garde le site léger et très propre."
+    "planText": "Vous pouvez intégrer une carte Google Maps ici si vous le souhaitez. Pour l'instant, on garde le site léger et très propre."
   }
 }
