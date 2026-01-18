@@ -8,67 +8,37 @@
 
   // ===== GLOBAL DATA STORAGE =====
   let siteData = null;
-    // ===== OFFERS MODAL =====
-  function qs(id) { return document.getElementById(id); }
-
-  function openOffersModal() {
-    qs("offersOverlay")?.classList.remove("hidden");
-    qs("offersModal")?.classList.remove("hidden");
-    qs("offersOverlay")?.setAttribute("aria-hidden", "false");
-  }
-
-  function closeOffersModal() {
-    qs("offersOverlay")?.classList.add("hidden");
-    qs("offersModal")?.classList.add("hidden");
-    qs("offersOverlay")?.setAttribute("aria-hidden", "true");
-  }
-
-  function bindOffersModalEvents() {
-    qs("offersCloseBtn")?.addEventListener("click", closeOffersModal);
-    qs("offersOverlay")?.addEventListener("click", closeOffersModal);
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeOffersModal();
-    });
-    qs("offersOpenBtn")?.addEventListener("click", openOffersModal);
-  }
-
-  function renderOffersModalFromData(data) {
-    const modal = data?.home?.offersModal;
-    if (!modal) return;
-
-    qs("offersModalTitle").textContent = modal.title || "Offres du moment";
-    qs("offersModalSubtitle").textContent = modal.subtitle || "";
-
-    const list = qs("offersModalList");
-    list.innerHTML = "";
-    (modal.items || []).forEach(it => {
-      const li = document.createElement("li");
-      const strong = document.createElement("strong");
-      strong.textContent = it.strong || "";
-      li.appendChild(strong);
-      if (it.text) li.appendChild(document.createTextNode(" — " + it.text));
-      list.appendChild(li);
-    });
-
-    qs("offersModalHint").textContent = modal.hint || "";
-  }
-
-  function applyOffersModalState(data) {
-    const open = data?.home?.offersModalState?.open === true;
-    if (open) openOffersModal();
-    else closeOffersModal();
-  }
 
 
   // ===== LOAD JSON DATA =====
   async function loadSiteData() {
     try {
-      const response = await fetch('site.json');
-      if (!response.ok) throw new Error('Failed to load site.json');
+      // Try relative path first
+      let response = await fetch('site.json');
+      
+      // If that fails, try from root
+      if (!response.ok) {
+        response = await fetch('/site.json');
+      }
+      
+      // If still fails, try with current directory
+      if (!response.ok) {
+        const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        response = await fetch(basePath + '/site.json');
+      }
+      
+      if (!response.ok) {
+        throw new Error(`Failed to load site.json: ${response.status} ${response.statusText}`);
+      }
+      
       siteData = await response.json();
+      console.log('✅ Site data loaded successfully');
       return siteData;
     } catch (error) {
-      console.error('Error loading site data:', error);
+      console.error('❌ Error loading site data:', error);
+      console.error('Current URL:', window.location.href);
+      console.error('Trying to load from:', 'site.json');
+      alert('Erreur: Impossible de charger site.json. Vérifiez que le fichier existe et que vous utilisez un serveur web (pas file://).');
       return null;
     }
   }
@@ -167,6 +137,13 @@
     const modal = home.offersModal;
     if (!modal) return;
 
+    // Only populate modal if we're on the home page (where modal elements exist)
+    const modalContainer = document.getElementById('offers-modal-overlay');
+    if (!modalContainer) {
+      // Modal doesn't exist on this page, skip
+      return;
+    }
+
     // Set title
     const modalTitle = document.getElementById('offers-modal-title');
     if (modalTitle && modal.title) {
@@ -256,7 +233,12 @@
   // ===== POPULATE PRODUCTS PAGE =====
   function populateProductsPage(data) {
     const products = data.products;
-    if (!products) return;
+    if (!products) {
+      console.error('No products data found');
+      return;
+    }
+
+    console.log('Populating products page with', products.categories?.length, 'categories');
 
     // Page hero
     const pageTitle = document.querySelector('.page-title');
@@ -264,57 +246,57 @@
     if (pageTitle) pageTitle.textContent = products.pageTitle?.replace(' — Boulangerie du Sud', '') || 'Nos produits';
     if (pageSubtitle && products.intro) pageSubtitle.textContent = products.intro;
 
-    // Clear existing sections
-    const productsSection = document.querySelector('.products-section');
-    if (productsSection && products.categories) {
-      const container = productsSection.parentElement || document.body;
-      
-      // Remove old products sections except the first container
-      const existingSections = container.querySelectorAll('.products-section');
-      existingSections.forEach((section, index) => {
-        if (index > 0) section.remove();
-      });
-
-      // Populate categories
-      products.categories.forEach((category, catIndex) => {
-        let section = existingSections[catIndex] || productsSection;
-        
-        if (catIndex === 0) {
-          // Use existing first section
-          const heading = section.querySelector('.section-heading');
-          if (heading) heading.textContent = category.title;
-          
-          const grid = section.querySelector('.products-grid');
-          if (grid) {
-            grid.innerHTML = '';
-            category.items.forEach(item => {
-              const card = createProductCard(item);
-              grid.appendChild(card);
-            });
-          }
-        } else {
-          // Create new section for additional categories
-          section = document.createElement('section');
-          section.className = 'products-section';
-          
-          const heading = document.createElement('h2');
-          heading.className = 'section-heading';
-          heading.textContent = category.title;
-          section.appendChild(heading);
-          
-          const grid = document.createElement('div');
-          grid.className = 'products-grid';
-          
-          category.items.forEach(item => {
-            const card = createProductCard(item);
-            grid.appendChild(card);
-          });
-          
-          section.appendChild(grid);
-          productsSection.parentElement.insertBefore(section, productsSection.nextSibling);
-        }
-      });
+    // Find container for products sections
+    const firstSection = document.querySelector('.products-section');
+    if (!firstSection) {
+      console.error('No .products-section found in DOM');
+      return;
     }
+
+    const container = firstSection.parentElement || document.body;
+    
+    // Remove all existing product sections
+    const allSections = container.querySelectorAll('.products-section');
+    allSections.forEach(section => section.remove());
+
+    // Create new sections for each category
+    if (!products.categories || products.categories.length === 0) {
+      console.error('No categories found in products data');
+      return;
+    }
+
+    products.categories.forEach((category, catIndex) => {
+      console.log(`Creating section for category: ${category.title} with ${category.items?.length || 0} items`);
+      
+      // Create section element
+      const section = document.createElement('section');
+      section.className = 'products-section';
+      
+      // Create heading
+      const heading = document.createElement('h2');
+      heading.className = 'section-heading';
+      heading.textContent = category.title;
+      section.appendChild(heading);
+      
+      // Create grid
+      const grid = document.createElement('div');
+      grid.className = 'products-grid';
+      
+      // Add product cards
+      if (category.items && category.items.length > 0) {
+        category.items.forEach(item => {
+          const card = createProductCard(item);
+          grid.appendChild(card);
+        });
+      } else {
+        console.warn(`Category ${category.title} has no items`);
+      }
+      
+      section.appendChild(grid);
+      container.appendChild(section);
+    });
+
+    console.log('Products page populated successfully');
   }
 
   // ===== CREATE PRODUCT CARD =====
@@ -522,38 +504,53 @@
 
   // ===== INITIALIZE PAGE =====
   async function initializePage() {
+    console.log('🔄 Starting page initialization...');
     const data = await loadSiteData();
     if (!data) {
-      console.error('Could not load site data');
+      console.error('❌ Could not load site data - aborting page initialization');
       return;
     }
-        // OFFERS MODAL (init)
-    bindOffersModalEvents();
-    renderOffersModalFromData(data);
-    applyOffersModalState(data);
 
-
+    console.log('✅ Site data loaded successfully:', data);
     const currentPage = getCurrentPage();
+    console.log('📍 Current page:', currentPage);
     
     // Populate common elements
-    populateNavigation(data);
-    populateFooter(data);
-    populatePageTitle(data, currentPage === 'home' ? 'home' : currentPage === 'products' ? 'products' : currentPage);
+    try {
+      populateNavigation(data);
+      populateFooter(data);
+      populatePageTitle(data, currentPage === 'home' ? 'home' : currentPage === 'products' ? 'products' : currentPage);
+      console.log('✅ Common elements populated');
+    } catch (error) {
+      console.error('❌ Error populating common elements:', error);
+    }
 
     // Populate page-specific content
-    switch (currentPage) {
-      case 'home':
-        populateHomePage(data);
-        break;
-      case 'products':
-        populateProductsPage(data);
-        break;
-      case 'about':
-        populateAboutPage(data);
-        break;
-      case 'contact':
-        populateContactPage(data);
-        break;
+    try {
+      switch (currentPage) {
+        case 'home':
+          console.log('🏠 Populating home page...');
+          populateHomePage(data);
+          break;
+        case 'products':
+          console.log('🛍️ Populating products page...');
+          populateProductsPage(data);
+          break;
+        case 'about':
+          console.log('ℹ️ Populating about page...');
+          populateAboutPage(data);
+          break;
+        case 'contact':
+          console.log('📞 Populating contact page...');
+          populateContactPage(data);
+          break;
+        default:
+          console.warn('⚠️ Unknown page type:', currentPage);
+      }
+      console.log('✅ Page-specific content populated');
+    } catch (error) {
+      console.error('❌ Error populating page-specific content:', error);
+      console.error('Stack trace:', error.stack);
     }
 
     // Initialize animations after content is loaded
@@ -721,7 +718,17 @@
 
   // ===== INITIALIZE ON DOM LOAD =====
   document.addEventListener('DOMContentLoaded', function() {
-    initializePage();
+    console.log('🚀 DOM loaded, initializing page...');
+    console.log('Current page:', getCurrentPage());
+    console.log('Window location:', window.location.href);
+    
+    // Initialize page (this loads JSON and populates content)
+    initializePage().then(() => {
+      console.log('✅ Page initialization complete');
+    }).catch((error) => {
+      console.error('❌ Error during page initialization:', error);
+    });
+    
     initSmoothScroll();
     initButtonEffects();
     initParallax();
@@ -732,5 +739,8 @@
     console.log('%c🍞 Boulangerie du Sud', 'font-size: 20px; font-weight: bold; color: #d4a574;');
     console.log('%cSite chargé depuis site.json', 'font-size: 14px; color: #4a3f32;');
   });
+
+  // Also log when script loads
+  console.log('📜 script.js loaded');
 
 })();
