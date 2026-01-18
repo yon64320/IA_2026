@@ -49,19 +49,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Verify script loaded after a small delay
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        if (typeof initializePage === 'undefined') {
-          console.error('❌ script.js NOT loaded - functions not found!');
-          console.error('Make sure you are using a web server (http://localhost:8000) not file://');
-          alert('ERREUR: Le fichier script.js ne se charge pas correctement.\n\nVérifiez:\n1. Que le serveur Python est démarré\n2. Que vous utilisez http://localhost:8000 (pas file://)\n3. Ouvrez la console (F12) pour plus de détails');
-        } else {
-          console.log('✅ script.js loaded successfully');
-        }
-      }, 100);
-    });
-  </script>
 </body>
 </html>
