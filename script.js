@@ -8,6 +8,57 @@
 
   // ===== GLOBAL DATA STORAGE =====
   let siteData = null;
+    // ===== OFFERS MODAL =====
+  function qs(id) { return document.getElementById(id); }
+
+  function openOffersModal() {
+    qs("offersOverlay")?.classList.remove("hidden");
+    qs("offersModal")?.classList.remove("hidden");
+    qs("offersOverlay")?.setAttribute("aria-hidden", "false");
+  }
+
+  function closeOffersModal() {
+    qs("offersOverlay")?.classList.add("hidden");
+    qs("offersModal")?.classList.add("hidden");
+    qs("offersOverlay")?.setAttribute("aria-hidden", "true");
+  }
+
+  function bindOffersModalEvents() {
+    qs("offersCloseBtn")?.addEventListener("click", closeOffersModal);
+    qs("offersOverlay")?.addEventListener("click", closeOffersModal);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeOffersModal();
+    });
+    qs("offersOpenBtn")?.addEventListener("click", openOffersModal);
+  }
+
+  function renderOffersModalFromData(data) {
+    const modal = data?.home?.offersModal;
+    if (!modal) return;
+
+    qs("offersModalTitle").textContent = modal.title || "Offres du moment";
+    qs("offersModalSubtitle").textContent = modal.subtitle || "";
+
+    const list = qs("offersModalList");
+    list.innerHTML = "";
+    (modal.items || []).forEach(it => {
+      const li = document.createElement("li");
+      const strong = document.createElement("strong");
+      strong.textContent = it.strong || "";
+      li.appendChild(strong);
+      if (it.text) li.appendChild(document.createTextNode(" — " + it.text));
+      list.appendChild(li);
+    });
+
+    qs("offersModalHint").textContent = modal.hint || "";
+  }
+
+  function applyOffersModalState(data) {
+    const open = data?.home?.offersModalState?.open === true;
+    if (open) openOffersModal();
+    else closeOffersModal();
+  }
+
 
   // ===== LOAD JSON DATA =====
   async function loadSiteData() {
@@ -106,6 +157,100 @@
         if (p) p.innerHTML = `${site.phone || ''}<br>${site.email || ''}`;
       }
     }
+
+    // Populate offers modal
+    populateOffersModal(home);
+  }
+
+  // ===== POPULATE OFFERS MODAL =====
+  function populateOffersModal(home) {
+    const modal = home.offersModal;
+    if (!modal) return;
+
+    // Set title
+    const modalTitle = document.getElementById('offers-modal-title');
+    if (modalTitle && modal.title) {
+      modalTitle.textContent = modal.title;
+    }
+
+    // Set subtitle
+    const modalSubtitle = document.getElementById('offers-modal-subtitle');
+    if (modalSubtitle && modal.subtitle) {
+      modalSubtitle.textContent = modal.subtitle;
+    }
+
+    // Set items list
+    const modalList = document.getElementById('offers-modal-list');
+    if (modalList && modal.items) {
+      modalList.innerHTML = '';
+      modal.items.forEach(item => {
+        const li = document.createElement('li');
+        if (item.strong) {
+          const strong = document.createElement('strong');
+          strong.textContent = item.strong;
+          li.appendChild(strong);
+        }
+        if (item.text) {
+          const text = document.createTextNode(' — ' + item.text);
+          li.appendChild(text);
+        }
+        modalList.appendChild(li);
+      });
+    }
+
+    // Set hint
+    const modalHint = document.getElementById('offers-modal-hint');
+    if (modalHint && modal.hint) {
+      modalHint.textContent = modal.hint;
+    }
+  }
+
+  // ===== MODAL FUNCTIONS =====
+  function openOffersModal() {
+    const overlay = document.getElementById('offers-modal-overlay');
+    if (overlay) {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent body scroll
+    }
+  }
+
+  function closeOffersModal() {
+    const overlay = document.getElementById('offers-modal-overlay');
+    if (overlay) {
+      overlay.classList.remove('active');
+      document.body.style.overflow = ''; // Restore body scroll
+    }
+  }
+
+  function initOffersModal() {
+    // Open button
+    const openBtn = document.getElementById('offers-btn');
+    if (openBtn) {
+      openBtn.addEventListener('click', openOffersModal);
+    }
+
+    // Close button
+    const closeBtn = document.getElementById('offers-modal-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeOffersModal);
+    }
+
+    // Close on overlay click
+    const overlay = document.getElementById('offers-modal-overlay');
+    if (overlay) {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+          closeOffersModal();
+        }
+      });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeOffersModal();
+      }
+    });
   }
 
   // ===== POPULATE PRODUCTS PAGE =====
@@ -382,6 +527,11 @@
       console.error('Could not load site data');
       return;
     }
+        // OFFERS MODAL (init)
+    bindOffersModalEvents();
+    renderOffersModalFromData(data);
+    applyOffersModalState(data);
+
 
     const currentPage = getCurrentPage();
     
@@ -576,6 +726,7 @@
     initButtonEffects();
     initParallax();
     initMobileNav();
+    initOffersModal();
 
     // Console message
     console.log('%c🍞 Boulangerie du Sud', 'font-size: 20px; font-weight: bold; color: #d4a574;');

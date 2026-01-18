@@ -133,6 +133,19 @@ body {
   position: relative;
 }
 
+.btn-offers {
+  background-color: var(--color-brown);
+  color: var(--color-cream) !important;
+  border: none;
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+.btn-offers:hover {
+  background-color: var(--color-charcoal) !important;
+  color: var(--color-cream) !important;
+}
+
 .nav-link:hover {
   color: var(--color-charcoal);
   background-color: rgba(212, 165, 116, 0.1);
@@ -174,6 +187,13 @@ body {
     width: 100%;
     text-align: center;
     padding: var(--spacing-sm);
+  }
+
+  .nav-menu .btn-offers {
+    width: 100%;
+    margin-left: 0;
+    margin-top: var(--spacing-xs);
+    text-align: center;
   }
 }
 
@@ -969,6 +989,179 @@ a:focus {
   font-size: 0.875rem;
 }
 
+/* ===== OFFERS BUTTON IN NAV ===== */
+.btn-offers {
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-left: var(--spacing-sm);
+}
+
+.btn-offers:hover {
+  background-color: var(--color-charcoal);
+  transform: translateY(-2px);
+}
+
+/* ===== MODAL OVERLAY ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(44, 36, 24, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+  padding: var(--spacing-lg);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MODAL CONTAINER ===== */
+.modal-container {
+  background-color: var(--color-cream);
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(44, 36, 24, 0.3);
+  transform: scale(0.9) translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.modal-overlay.active .modal-container {
+  transform: scale(1) translateY(0);
+}
+
+/* ===== MODAL CLOSE BUTTON ===== */
+.modal-close {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--color-charcoal);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background-color: rgba(212, 165, 116, 0.2);
+  color: var(--color-brown);
+  transform: rotate(90deg);
+}
+
+.modal-close span {
+  display: block;
+  line-height: 1;
+}
+
+/* ===== MODAL CONTENT ===== */
+.modal-content {
+  padding: var(--spacing-xl);
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-md);
+  padding-right: var(--spacing-xl);
+}
+
+.modal-subtitle {
+  color: var(--color-charcoal-light);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+/* ===== OFFERS LIST ===== */
+.offers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.offers-list li {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-left: 4px solid var(--color-brown);
+  border-radius: 8px;
+  color: var(--color-charcoal-light);
+  line-height: 1.7;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.offers-list li:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.2);
+}
+
+.offers-list li strong {
+  color: var(--color-charcoal);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.modal-hint {
+  font-size: 0.875rem;
+  color: var(--color-charcoal-light);
+  font-style: italic;
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+/* ===== MODAL RESPONSIVE ===== */
+@media (max-width: 767px) {
+  .modal-container {
+    max-width: 95%;
+    border-radius: 16px;
+  }
+
+  .modal-content {
+    padding: var(--spacing-lg);
+  }
+
+  .btn-offers {
+    font-size: 0.875rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin-left: 0;
+    margin-top: var(--spacing-xs);
+    width: 100%;
+  }
+}
+
 /* ===== PRINT STYLES ===== */
 @media print {
   .hero,
@@ -980,4 +1173,41 @@ a:focus {
   .main-nav {
     display: none;
   }
+
+  .modal-overlay {
+    display: none !important;
+  }
+}
+.hidden { display: none !important; }
+
+.overlay{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 999;
+}
+
+.modal{
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(560px, 92vw);
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  z-index: 1000;
+}
+
+.modal__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modal__close{
+  font-size: 22px;
+  line-height: 1;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }

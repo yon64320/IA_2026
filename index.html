@@ -21,6 +21,7 @@
         <li><a href="produits.html" class="nav-link">Produits</a></li>
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><button class="nav-link btn-offers" id="offers-btn">Offres du moment</button></li>
       </ul>
     </div>
   </nav>
@@ -188,6 +189,23 @@
     <p>© 2024 Boulangerie du Sud — 67 Avenue du Prado, 13006 Marseille</p>
     <p>7h00–19h00 • 04 91 55 12 34 • contact@boulangeriedusud.fr</p>
   </footer>
+
+  <!-- MODAL OFFERS -->
+  <div class="modal-overlay" id="offers-modal-overlay">
+    <div class="modal-container" id="offers-modal">
+      <button class="modal-close" id="offers-modal-close" aria-label="Fermer">
+        <span>×</span>
+      </button>
+      <div class="modal-content">
+        <h2 class="modal-title" id="offers-modal-title">Offres du moment</h2>
+        <p class="modal-subtitle" id="offers-modal-subtitle"></p>
+        <ul class="offers-list" id="offers-modal-list">
+          <!-- Items will be populated from JSON -->
+        </ul>
+        <p class="modal-hint" id="offers-modal-hint"></p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
