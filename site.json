@@ -203,6 +203,10 @@
             "name": "Flan pâtissier",
             "desc": "Traditionnel, onctueux",
             "price": "3,20"
+          },
+          {
+            "name": "peche tenebreuse",
+            "price": "35€"
           }
         ]
       },
