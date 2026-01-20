@@ -129,6 +129,11 @@
             "name": "Pain aux céréales",
             "desc": "Mélange de graines et céréales",
             "price": "2,80"
+          },
+          {
+            "name": "pain suisse",
+            "desc": "c'est bon",
+            "price": "55€"
           }
         ]
       },
