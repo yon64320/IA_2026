@@ -171,6 +171,11 @@
             "name": "Chausson aux pommes",
             "desc": "Pommes fraîches, pâte feuilletée",
             "price": "2,50"
+          },
+          {
+            "name": "Croissant au chocolat blanc",
+            "desc": "",
+            "price": "5,00"
           }
         ]
       },
