@@ -222,6 +222,11 @@
           {
             "name": "peche tenebreuse",
             "price": "35€"
+          },
+          {
+            "name": "éclair au nutella noisette",
+            "desc": "c'est tarpin tarpin bon",
+            "price": "12€"
           }
         ]
       },
