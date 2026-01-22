@@ -91,6 +91,10 @@
         {
           "strong": "Pause café",
           "text": "café + viennoiserie (selon dispo)"
+        },
+        {
+          "strong": "Une baguette achetée, deux offertes!!",
+          "text": ""
         }
       ],
       "hint": "Astuce : tu peux aussi ouvrir ce pop-up via le bouton \"Offres du moment\" en haut."
@@ -219,10 +223,7 @@
             "desc": "Traditionnel, onctueux",
             "price": "3,20"
           },
-          {
-            "name": "peche tenebreuse",
-            "price": "35€"
-          },
+          null,
           {
             "name": "éclair au nutella noisette",
             "desc": "c'est tarpin tarpin bon",
@@ -259,6 +260,11 @@
             "name": "Quiche du jour",
             "desc": "Quiche maison, salade verte",
             "price": "5,80"
+          },
+          {
+            "name": "Sandwich maison",
+            "desc": "",
+            "price": "8"
           }
         ]
       },
