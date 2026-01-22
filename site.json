@@ -182,7 +182,10 @@
             "desc": "Pommes fraîches, pâte feuilletée",
             "price": "2,50"
           }
-        ]
+        ],
+        "items[name=Chocolatine]": {
+          "price": "2,00"
+        }
       },
       {
         "id": "patisseries",
