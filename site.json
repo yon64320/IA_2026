@@ -160,7 +160,7 @@
           {
             "name": "Chocolatine",
             "desc": "Pain au chocolat, classique",
-            "price": "1,80"
+            "price": "2,00"
           },
           {
             "name": "Chouquettes",
@@ -183,7 +183,6 @@
             "price": "2,50"
           }
         ]
-       
       },
       {
         "id": "patisseries",
