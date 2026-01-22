@@ -134,6 +134,11 @@
             "name": "pain suisse",
             "desc": "c'est bon",
             "price": "55€"
+          },
+          {
+            "name": "baguette céréréales fraiche",
+            "desc": "c'est tarpin bon",
+            "price": "12€"
           }
         ]
       },
