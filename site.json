@@ -140,11 +140,7 @@
             "price": "55€"
           },
           null,
-          {
-            "name": "baguette céréréales fraiche",
-            "desc": "c'est tarpin bon",
-            "price": "12€"
-          },
+          null,
           {
             "name": "pain croissant rouge",
             "price": "8€",
